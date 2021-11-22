@@ -1,0 +1,15 @@
+<html>
+    <HEAD>
+        <title>Articles</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </HEAD>
+    <body>
+        <div class="wrapper">
+            <h1>
+                <a href="{% url 'articles:list' %}"><img src="/static/logo.png"width="100" height="50"></a>
+            </h1>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
