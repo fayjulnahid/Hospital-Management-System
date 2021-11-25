@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<title>Login Page</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,6 +41,10 @@
 
 				<form class="login100-form validate-form"action="/accounts/login/"method="post">
 {% csrf_token %}
+
+	{% if request.GET.next %}
+	 <input type="hidden" name="next" value="{{request.GET.next}}">
+	{% endif %}
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Username</span>
 						{{ form.username }}
