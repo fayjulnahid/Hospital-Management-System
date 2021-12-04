@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^articles/', include('articles.urls')),
     url(r'^about/$', views.about),
     url(r'^$', views.homepage),
-    url(r'^search_disease/', include('search_disease.urls'))
+    url(r'^search_disease/', views.search_disease)
 ]
 
 urlpatterns += staticfiles_urlpatterns()
