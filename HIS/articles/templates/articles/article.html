@@ -12,7 +12,7 @@
         <div class="col-md-10">
             <div class="row p-2 bg-white border rounded ">
 {% for article in articles %}
-                <div class="col-md-3 mt-1 left"><img class="img-fluid img-responsive rounded product-image" src="https://i.imgur.com/QpjAiHq.jpg"></div>
+                <div class="col-md-3 mt-1 left"><img  src="{{article.picture.url}}" width="100" class="rounded-circle"></div>
                 <div class="col-md-6 mt-1 ">
                     <h5>{{article.title}}</h5>
                     <div class="d-flex flex-row gap">
@@ -20,6 +20,7 @@
                 </div>
                 <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                     <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button"><a href="{% url 'articles:detail' slug=article.sluge %}">Details</a></button>
+
                         <button class="btn btn-outline-primary btn-sm mt-2" type="button">Take Appointment</button></div>
                 </div>
                     <br><br><br>
@@ -43,7 +44,7 @@ body {
 .spec-1 {
     color: #938787;
     font-size: 15px;
-    padding: 5px;
+    padding: 10px;
 }
 
 h5 {
@@ -53,7 +54,7 @@ h5 {
 }
 .left{
 float: left;
-padding: 5px;
+padding: 20px;
 }
 
 .gap{
