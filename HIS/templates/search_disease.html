@@ -5,6 +5,9 @@
     <center>
         {% if searched %}
             <h1>You searched for {{ searched }}</h1>
+            {% for disease in diseases %}
+            {{ disease }} <br>
+            {% endfor %}
         {% else %}
             <h1>Hey you forgot to search for a Disease</h1>
         {% endif %}

@@ -1,6 +1,8 @@
+from django.apps import apps
 from django.http import HttpResponse
 from django.shortcuts import render
-import HIS
+#from HIS.articles.models import Article
+nahid=apps.get_model('articles', 'Article')
 
 
 def homepage(request):
@@ -14,7 +16,7 @@ def search_disease(request):
     if request.method == "POST":
         searched = request.POST['searched']
 
-        #disease = HIS.articles.models.Article.objects.filter(title__contains=searched)
-        return render(request,'search_disease.html',{'searched': searched})
+        diseases = nahid.objects.filter(title__contains=searched)
+        return render(request,'search_disease.html',{'searched': searched, 'diseases':diseases})
     else:
         return render(request, 'search_disease.html')
