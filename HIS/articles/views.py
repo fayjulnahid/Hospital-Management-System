@@ -14,8 +14,8 @@ def article_detail(request, slug):
     article = Article.objects.get(sluge=slug)
     return render(request, 'articles/article_detail.html', {'article': article})
 
-#def appointment(request):
-    #return render(request,'appointment.html')
+def appointment(request):
+    return render(request,'articles/appointment.html')
 
 @login_required(login_url="/accounts/login/")
 def article_create(request):

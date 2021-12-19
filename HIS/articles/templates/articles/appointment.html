@@ -13,10 +13,10 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
 
 	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css" />
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="/static/css/style.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,45 +38,40 @@
 								<div class="form-checkbox">
 									<label for="roundtrip">
 										<input type="radio" id="roundtrip" name="flight-type">
-										<span></span>Roundtrip
+
 									</label>
 									<label for="one-way">
 										<input type="radio" id="one-way" name="flight-type">
-										<span></span>One way
+
 									</label>
 									<label for="multi-city">
 										<input type="radio" id="multi-city" name="flight-type">
-										<span></span>Multi-City
+
 									</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Flying from</span>
-										<input class="form-control" type="text" placeholder="City or airport">
+										<span class="form-label">Disease Name</span>
+										<input class="form-control" type="text" placeholder="what kind of Disease?">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Flyning to</span>
-										<input class="form-control" type="text" placeholder="City or airport">
+										<span class="form-label">Preferable Doctor or Hospital</span>
+										<input class="form-control" type="text" placeholder="Optional">
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-3">
 									<div class="form-group">
-										<span class="form-label">Departing</span>
+										<span class="form-label">Preferable Schedule</span>
 										<input class="form-control" type="date" required>
 									</div>
 								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<span class="form-label">Returning</span>
-										<input class="form-control" type="date" required>
-									</div>
-								</div>
+
 								<div class="col-md-2">
 									<div class="form-group">
 										<span class="form-label">Adults (18+)</span>
@@ -103,10 +98,10 @@
 							<div class="row">
 								<div class="col-md-3">
 									<div class="form-group">
-										<span class="form-label">Travel class</span>
+										<span class="form-label">Cabin Catagory(If needed)</span>
 										<select class="form-control">
+											<option>None</option>
 											<option>Economy class</option>
-											<option>Business class</option>
 											<option>First class</option>
 										</select>
 										<span class="select-arrow"></span>
@@ -114,7 +109,12 @@
 								</div>
 								<div class="col-md-3">
 									<div class="form-btn">
-										<button class="submit-btn">Show flights</button>
+										<button class="submit-btn">Show Informations</button>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-btn">
+										<button class="submit-btn"><a href="../" style="color: white;background-color: transparent;text-decoration: none;">Back</a></button>
 									</div>
 								</div>
 							</div>
