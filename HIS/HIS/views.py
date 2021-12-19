@@ -20,3 +20,9 @@ def search_disease(request):
         return render(request,'search_disease.html',{'searched': searched, 'diseases':diseases})
     else:
         return render(request, 'search_disease.html')
+
+def contact_us(request):
+    return render(request,'contact_us.html')
+
+#def appointment(request):
+    #return render(request,'appointment.html')

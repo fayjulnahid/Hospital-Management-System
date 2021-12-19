@@ -6,10 +6,10 @@
         {% if searched %}
             <h1>You searched for {{ searched }}</h1>
             {% for disease in diseases %}
-            {{ disease }} <br>
+            {{ disease }}<br> {{ disease.experties }}<br>{{ disease.body }} <br>
             {% endfor %}
         {% else %}
-            <h1>Hey you forgot to search for a Disease</h1>
+            <h1>Hey! you forgot to search for a Disease or a Doctor</h1>
         {% endif %}
     </center>
 
