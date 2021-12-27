@@ -132,3 +132,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL='articles:list'
+
+#email settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'fayjulnahid2420@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+
+# python -m smtpd -n -c DebuggingServer localhost:1025
+# myaccount.google.com/lesssecureapps
+# myaccount.google.com/apppasswords
+# accounts.google.com/DisplayUnlockCaptcha
