@@ -42,7 +42,17 @@ def article_detail(request, slug):
     return render(request, 'articles/article_detail.html', {'article': article})
 
 def appointment(request):
-    return render(request,'articles/appointment.html')
+    if request.method == "POST":
+        disease_name = request.POST['disease-name']
+        preferable_doc = request.POST['preferable-doc']
+        preferable_schedule = request.POST['preferable-schedule']
+        adults = request.POST['adults']
+        children = request.POST['children']
+        cabin_category = request.POST['cabin-category']
+
+        return render(request, 'articles/appointment.html', {'disease_name': disease_name})
+    else:
+        return render(request,'articles/appointment.html')
 
 @login_required(login_url="/accounts/login/")
 def article_create(request):

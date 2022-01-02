@@ -33,34 +33,20 @@
 			<div class="container">
 				<div class="row">
 					<div class="booking-form">
-						<form>
-							<div class="form-group">
-								<div class="form-checkbox">
-									<label for="roundtrip">
-										<input type="radio" id="roundtrip" name="flight-type">
-
-									</label>
-									<label for="one-way">
-										<input type="radio" id="one-way" name="flight-type">
-
-									</label>
-									<label for="multi-city">
-										<input type="radio" id="multi-city" name="flight-type">
-
-									</label>
-								</div>
-							</div>
+						<form method="post">
+							{% csrf_token %}
+							<h2>{{ disease_name }}</h2>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Disease Name</span>
-										<input class="form-control" type="text" placeholder="what kind of Disease?">
+										<input class="form-control" type="text" name="disease-name" placeholder="what kind of Disease?">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Preferable Doctor or Hospital</span>
-										<input class="form-control" type="text" placeholder="Optional">
+										<input class="form-control" type="text" name="preferable-doc" placeholder="Optional">
 									</div>
 								</div>
 							</div>
@@ -68,14 +54,14 @@
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Preferable Schedule</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" name="preferable-schedule" required>
 									</div>
 								</div>
 
 								<div class="col-md-2">
 									<div class="form-group">
 										<span class="form-label">Adults (18+)</span>
-										<select class="form-control">
+										<select class="form-control" name="adults">
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>
@@ -86,7 +72,7 @@
 								<div class="col-md-2">
 									<div class="form-group">
 										<span class="form-label">Children (0-17)</span>
-										<select class="form-control">
+										<select class="form-control" name="children">
 											<option>0</option>
 											<option>1</option>
 											<option>2</option>
@@ -98,8 +84,8 @@
 							<div class="row">
 								<div class="col-md-3">
 									<div class="form-group">
-										<span class="form-label">Cabin Catagory(If needed)</span>
-										<select class="form-control">
+										<span class="form-label">Cabin Category(If needed)</span>
+										<select class="form-control" name="cabin-category">
 											<option>None</option>
 											<option>Economy class</option>
 											<option>First class</option>
@@ -109,7 +95,7 @@
 								</div>
 								<div class="col-md-3">
 									<div class="form-btn">
-										<button class="submit-btn">Show Informations</button>
+										<button class="submit-btn">Confirm</button>
 									</div>
 								</div>
 								<div class="col-md-3">
