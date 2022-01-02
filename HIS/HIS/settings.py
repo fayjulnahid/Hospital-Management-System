@@ -136,8 +136,8 @@ LOGOUT_REDIRECT_URL='articles:list'
 #email settings
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'fayjulnahid2420@gmail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = '2019-1-60-051@std.ewubd.edu'
+EMAIL_HOST_PASSWORD = 'ahoyolkanynnpyjh'
 EMAIL_USE_TLS = True
 
 # python -m smtpd -n -c DebuggingServer localhost:1025
