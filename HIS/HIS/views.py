@@ -35,7 +35,7 @@ def contact_us(request):
             '\n' + 'Senders Email: ' + email + '\nSenders Subject: ' + subject + ' \nMessage: ' + message,
             # message
             email,  # from mail
-            ['2019-1-60-051@std.ewubd.edu'],  # to mail
+            ['fayjulnahid2420@gmail.com'],  # to mail
         )
 
         return render(request, 'contact_us.html', {'name': name})
