@@ -3,7 +3,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.mail import send_mail
 #from HIS.articles.models import Article
-nahid=apps.get_model('articles', 'Article')
+nahid = apps.get_model('articles', 'Article')
+nahid2 = apps.get_model('articles', 'Hospital')
 
 
 def homepage(request):
@@ -18,7 +19,9 @@ def search_disease(request):
         searched = request.POST['searched']
 
         diseases = nahid.objects.filter(title__contains=searched)
-        return render(request,'search_disease.html',{'searched': searched, 'diseases':diseases})
+        hospitals = nahid2.objects.filter(title__contains=searched)
+        return render(request,'search_disease.html',{'searched': searched, 'diseases': diseases , 'hospitals': hospitals})
+
     else:
         return render(request, 'search_disease.html')
 

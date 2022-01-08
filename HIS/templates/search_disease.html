@@ -4,12 +4,26 @@
 {% block content %}
     <center>
         {% if searched %}
-            <h1>You searched for {{ searched }}</h1>
+            <h1>You searched for: {{ searched }}</h1>
+        <br><br>
             {% for disease in diseases %}
-            {{ disease }}<br> {{ disease.experties }}<br>{{ disease.body }} <br>
+                <strong>{{ disease }}</strong>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button"><a href="{% url 'articles:detail' slug=disease.sluge %}">Details</a></button>
+
+                        <button class="btn btn-outline-primary btn-sm mt-2" type="button"><a href="{% url 'articles:appointment'  %}">Take Appointment</a></button></div>
+                </div>
+                    <br><br><br>
+            {% endfor %}
+
+            {% for hospital in hospitals %}
+                <strong>{{ hospital }}</strong>
+                <ul>
+                     Location: {{ hospital.body }}
+                </ul>
             {% endfor %}
         {% else %}
-            <h1>Hey! you forgot to search for a Disease or a Doctor</h1>
+            <h1>Hey! you forgot to search for a Doctor OR a Hospital</h1>
         {% endif %}
     </center>
 
