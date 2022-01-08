@@ -13,7 +13,7 @@ urlpatterns = [
     url(r"^accounts/", include('accounts.urls')),
     url(r'^articles/', include('articles.urls')),
     url(r'^about/$', views.about),
-    url(r'^$', views.homepage),
+    url(r'^$', views.homepage, name='homepage'),
     url(r'^search_disease/', views.search_disease, name='search_disease'),
     url(r'^contact_us/', views.contact_us, name='contact_us'),
     #url(r'^appointment/', views.appointment, name='appointment')
