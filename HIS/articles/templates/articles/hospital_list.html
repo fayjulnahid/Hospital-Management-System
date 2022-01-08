@@ -1,0 +1,17 @@
+{% extends 'base_layout.html'%}
+
+{% block content %}
+
+
+
+{% for hospital in hospitals %}
+
+<strong>{{ hospital }}</strong>
+    <ul>
+    <li>Location: {{ hospital.body }}</li>
+    </ul>
+
+{% endfor %}
+
+
+{% endblock %}

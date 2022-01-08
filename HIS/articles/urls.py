@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^create/$',views.article_create,name="create"),
     url(r'^appointment/', views.appointment, name='appointment'),
     url(r'^appointment_pdf/', views.appointment_pdf, name='appointment_pdf'),
+    url(r'^hospital_list/', views.hospital_list, name='hospital_list'),
     url(r'^(?P<slug>[\w-]+)/$', views.article_detail, name="detail"),
 
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Article
+from .models import Article, Hospital
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
@@ -11,6 +11,9 @@ from reportlab.lib.units import inch
 from reportlab.lib.pagesizes import letter
 
 
+def hospital_list(request):
+    hospitals = Hospital.objects.all()
+    return render(request, 'articles/hospital_list.html', {'hospitals': hospitals})
 
 def article_list(request):
     articles = Article.objects.all().order_by('date')
