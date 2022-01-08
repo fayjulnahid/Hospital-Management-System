@@ -35,7 +35,7 @@ def appointment(request):
         #sending mail
         send_mail(
             'Mail Sent By ' + appointment.name,  # subject
-            '\n' + 'Disease Information: ' + appointment.disease_name + '\n Name: ' + appointment.name + '\n Schedule: ' + appointment.preferable_schedule + ' \n Patient Information:\n ' +'Adults:' + appointment.adults +'\n Childern:' + appointment.children +'\n Cabin Information:' + appointment.cabin_category,
+            '\n Disease Information: ' + appointment.disease_name + '\n Name: ' + appointment.name + '\n Schedule: ' + appointment.preferable_schedule + ' \n Patient Information:\n ' +'Adults:' + appointment.adults +'\n Childern:' + appointment.children +'\n Cabin Information:' + appointment.cabin_category,
             # message
             appointment.name,  # from mail
             ['fayjulnahid2420@gmail.com'],  # to mail
