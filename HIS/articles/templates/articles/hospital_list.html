@@ -2,16 +2,33 @@
 
 {% block content %}
 
-
-
 {% for hospital in hospitals %}
 
 <strong>{{ hospital }}</strong>
-    <ul>
-    <li>Location: {{ hospital.body }}</li>
-    </ul>
+<br>
+
+    <li>Location: {{ hospital.body }} <br><br><br> </li>
+
 
 {% endfor %}
 
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
 
+li {
+  font-family: Cursive, Fantasy, sans-serif;
+  color:
+}
+
+    body{
+     background-image: url("/static/images/hospital.gif");
+       background-repeat: no-repeat;
+        background-size: 1920px 950px;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+</style>
 {% endblock %}

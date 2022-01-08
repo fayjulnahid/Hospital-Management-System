@@ -1,17 +1,68 @@
 {% extends 'base_layout.html' %}
 
-
-<head>
-    <title>Homepage</title>
-</head>
 {% block content %}
-<h1>Homepage</h1>
-<p>Welcome to homepage</p>
-<form method="POST" action="{% url 'search_disease' %}">
 
-    {% csrf_token %}
+    <div class="box">
+        <form method="POST" action="{% url 'search_disease' %}" name="search">
+            {% csrf_token %}
 
-    <input type="search" placeholder="Search Doctor or Hospital" aria-label="search" name="searched">
-    <button class="btn btn-outline-secondary" type="submit">Search</button>
-</form>
+            <input type="search" placeholder="Search Doctor or Hospital" class="input"  name="searched"
+            onmouseout="document.search.txt.value = ''">
+
+
+        </form>
+            <i class="fas fa-search"></i>
+    </div>
+	<style>
+	body{
+    margin: 0;
+    padding: 0;
+    background: #140f1d;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.input {
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: 4px solid #ffd52d;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    color: #ffd52d;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 400px;
+    background: #272133;
+    border-radius: 10px;
+}
+i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: #ffd52d;
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}
+input::placeholder{
+    opacity: 0;
+}
+
+input:focus::placeholder{
+    opacity: 1;
+}
+</style>
 {% endblock %}

@@ -8,11 +8,27 @@
         <br><br>
             {% for disease in diseases %}
                 <strong>{{ disease }}</strong>
+                <div class="container mt-5 mb-5 center">
+                    <div class="d-flex justify-content-center row">
+                    <div class="col-md-10">
+                         <div class="row p-2 bg-white border rounded ">
+                          <div class="col-md-3 mt-1 left"><img  src="{{disease.picture.url}}" width="100" class="rounded-circle"></div>
+                        <div class="col-md-6 mt-1 ">
+                    <h5>{{article.title}}</h5>
+                    <div class="d-flex flex-row gap">
+
                 <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                     <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button"><a href="{% url 'articles:detail' slug=disease.sluge %}">Details</a></button>
 
                         <button class="btn btn-outline-primary btn-sm mt-2" type="button"><a href="{% url 'articles:appointment'  %}">Take Appointment</a></button></div>
                 </div>
+                    <br><br><br>
+                </div>
+                <br> <br> <br>
+            </div>
+        </div>
+    </div>
+</div>
                     <br><br><br>
             {% endfor %}
 
@@ -26,5 +42,12 @@
             <h1>Hey! you forgot to search for a Doctor OR a Hospital</h1>
         {% endif %}
     </center>
+<style>
+    body{
+     background-image: url("/static/images/list.gif");
+       background-repeat: no-repeat;
+        background-size: auto;
+    }
 
+</style>
 {% endblock %}
