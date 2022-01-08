@@ -32,7 +32,7 @@ def contact_us(request):
         # send an email
         send_mail(
             'Mail Sent By ' + name,  # subject
-            '\n' + 'Senders Email: ' + email + '\nSenders Subject: ' + subject + ' \nMessage: ' + message,
+            '\n Senders Name: ' + name + '\n ' + 'Senders Email: ' + email + '\n Senders Subject: ' + subject + ' \n Message: ' + message,
             # message
             email,  # from mail
             ['fayjulnahid2420@gmail.com'],  # to mail
