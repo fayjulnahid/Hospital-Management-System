@@ -2,13 +2,16 @@
 
 {% block content %}
 
+            <div>
+                <h2>Passion for Caring</h2>
+                <h1>Offering Healing</h1>
+            </div>
+
     <div class="box">
         <form method="POST" action="{% url 'search_disease' %}" name="search">
             {% csrf_token %}
-
             <input type="search" placeholder="Search Doctor or Hospital" class="input"  name="searched"
             onmouseout="document.search.txt.value = ''">
-
 
         </form>
             <i class="fas fa-search"></i>
@@ -63,6 +66,24 @@ input::placeholder{
 
 input:focus::placeholder{
     opacity: 1;
+}
+h2{
+  vertical-align: mid;
+  text-align: center;
+  color: gray;
+  font-family: "Lucida Console", "Copperplate", monospace;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 60px;
+}
+h1{
+  vertical-align: mid;
+  text-align: center;
+  color: gray;
+  font-family: "Lucida Console", "Copperplate", monospace;
+
+  font-variant: small-caps;
+  font-size: 30px;
 }
 </style>
 {% endblock %}

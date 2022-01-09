@@ -20,7 +20,8 @@
     cursor: pointer
 }
 .name{
-font-size:25px;
+font-size:30px;
+font-variant: small-caps;
 }
 .card:before {
     content: "";
@@ -54,6 +55,7 @@ font-size:25px;
 
 .fonts {
     font-size: 15px
+    font-variant: small-caps;
 }
 
 .social-list {
@@ -97,9 +99,9 @@ font-size:25px;
             <div class="card p-3 py-4">
                 <div class="text-center"> <img src="{{article.picture.url}}" width="100" class="rounded-circle"> </div>
                 <div class="text-center mt-3"> <span class="bg-secondary p-1 px-4 rounded text-white">Doctor</span>
-                    <h5 class="mt-2 mb-0 name">{{article.title}}</h5> <span>{{article.experties}}</span>
+                    <h5 class="mt-2 mb-0 name">{{article.title}}</h5><br> <span>{{article.experties}}</span>
                     <div class="px-4 mt-1">
-                        <p class="fonts">{{article.body}} </p>
+                        <p class="fonts"><br>{{article.body}} </p>
                     </div>
                     <ul class="social-list">
                         <li><i class="fa fa-facebook"></i></li>

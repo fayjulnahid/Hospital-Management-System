@@ -4,7 +4,7 @@
 
 {% for hospital in hospitals %}
 
-<strong>{{ hospital }}</strong>
+<h1>{{ hospital }}</h1>
 <br>
 
     <li>Location: {{ hospital.body }} <br><br><br> </li>
@@ -13,13 +13,17 @@
 {% endfor %}
 
 <style>
-h1 {text-align: center;}
+h1 {text-align: center;
+font-size:20px;
+font-variant: small-caps;
+color: DarkSlateBlack;
+}
 p {text-align: center;}
 div {text-align: center;}
 
 li {
-  font-family: Cursive, Fantasy, sans-serif;
-  color:
+  font-variant: small-caps;
+  color: DarkSlateGrey
 }
 
     body{
@@ -28,6 +32,7 @@ li {
         background-size: 1920px 950px;
         background-attachment: fixed;
         background-position: center;
+
     }
 
 </style>
