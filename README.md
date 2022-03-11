@@ -17,3 +17,19 @@ Functional Requirements:
 
 
 GUI screenshots:
+![Alt text](screenshoot/1.png?raw=true "Optional Title")
+![Alt text](screenshoot/2.png?raw=true "Optional Title")
+![Alt text](screenshoot/3.png?raw=true "Optional Title")
+![Alt text](screenshoot/4.png?raw=true "Optional Title")
+![Alt text](screenshoot/5.png?raw=true "Optional Title")
+![Alt text](screenshoot/5_1.png?raw=true "Optional Title")
+![Alt text](screenshoot/6.png?raw=true "Optional Title")
+![Alt text](screenshoot/7.png?raw=true "Optional Title")
+![Alt text](screenshoot/8.png?raw=true "Optional Title")
+![Alt text](screenshoot/9.png?raw=true "Optional Title")
+![Alt text](screenshoot/10.png?raw=true "Optional Title")
+![Alt text](screenshoot/11.png?raw=true "Optional Title")
+![Alt text](screenshoot/12.png?raw=true "Optional Title")
+![Alt text](screenshoot/13.png?raw=true "Optional Title")
+![Alt text](screenshoot/14.png?raw=true "Optional Title")
+![Alt text](screenshoot/15.png?raw=true "Optional Title")
